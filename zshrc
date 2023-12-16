@@ -12,9 +12,9 @@ alias nvconfig="nvim ~/.config/nvim"
 eval "$(starship init zsh)"
 
 # Pywal
-(cat ~/.cache/wal/sequences &)
-cat ~/.cache/wal/sequences
-source ~/.cache/wal/colors-tty.sh
+(cat $HOME/.cache/wal/sequences &)
+cat $HOME/.cache/wal/sequences
+source $HOME/.cache/wal/colors-tty.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
