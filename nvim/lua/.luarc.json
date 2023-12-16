@@ -1,0 +1,32 @@
+{
+    "workspace.library": [
+        "/home/mehdi/.local/share/nvim/lazy/neodev.nvim/types/nightly",
+        "/usr/local/share/nvim/runtime/lua",
+        "/home/mehdi/.local/share/nvim/lazy/cmp-nvim-lua/lua",
+        "/home/mehdi/.local/share/nvim/lazy/plenary.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/lspkind.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/home/mehdi/.local/share/nvim/lazy/cmp-buffer/lua",
+        "/home/mehdi/.local/share/nvim/lazy/nvim-tree.lua/lua",
+        "/home/mehdi/.local/share/nvim/lazy/nvim-autopairs/lua",
+        "/home/mehdi/.local/share/nvim/lazy/mason.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/home/mehdi/.local/share/nvim/lazy/nvim-ts-autotag/lua",
+        "/home/mehdi/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/LuaSnip/lua",
+        "/home/mehdi/.local/share/nvim/lazy/telescope-fzf-native.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/cmp-path/lua",
+        "/home/mehdi/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/home/mehdi/.local/share/nvim/lazy/nvim-web-devicons/lua",
+        "/home/mehdi/.local/share/nvim/lazy/lualine.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/Comment.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/home/mehdi/.local/share/nvim/lazy/catppuccin/lua",
+        "/home/mehdi/.local/share/nvim/lazy/telescope.nvim/lua",
+        "/home/mehdi/.local/share/nvim/lazy/cmp_luasnip/lua",
+        "/home/mehdi/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/home/mehdi/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}
