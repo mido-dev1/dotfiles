@@ -1,0 +1,16 @@
+#!/bin/bash
+
+total=$(free -m | grep Mem | awk '{print ($2)}')
+used=$(free -m | grep Mem | awk '{print ($3)}')
+free=$(free -m | grep Mem | awk '{print ($4)}')
+used_per=$(free -m | grep Mem | awk '{printf "%.0f" ,($3/$2)*100}')
+
+if [ "$1" = "total" ]; then
+  echo $total
+elif [ "$1" = "used" ]; then
+  echo $used
+elif [ "$1" = "free" ]; then
+  echo $free
+elif [ "$1" = "used_per" ]; then
+  echo $used_per
+fi

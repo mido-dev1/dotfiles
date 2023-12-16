@@ -1,0 +1,35 @@
+(defpoll volume_percent :interval "1s" "wpctl get-volume @DEFAULT_SINK@ | awk -F' ' '{ print $2 }' | tr -d '.'")
+(defpoll is_muted :interval "1s" "wpctl get-volume @DEFAULT_SINK@ | awk -F' ' '{ print $3}'")
+(defvar vol_reveal false)
+
+(defwidget _volume []
+  (eventbox :onhover "${eww} update vol_reveal=true"
+    :onhoverlost "${eww} update vol_reveal=false"
+    (box :class "volume" :space-evenly "false"
+      (button 
+        :class "volume_icon"
+          :tooltip "${volume_percent}%"
+          ; :onclick "scripts/pop audio"
+          :onclick "wpctl set-mute @DEFAULT_SINK@ toggle"
+        "${
+          volume_percent == 0 || is_muted == "[MUTED]" ? "󰝟" :
+          volume_percent <= 25 ? "󰕿" :
+          volume_percent <= 50 ? "󰖀" :
+          volume_percent <= 75 ? "󰕾" :
+          ""
+        }"
+      )
+      (revealer :transition "slideleft"
+        :reveal vol_reveal
+        :duration "350ms"
+        (scale :class "volbar"
+          :value volume_percent
+          :tooltip "${volume_percent}%"
+          :max 100
+          :min 0
+        :onchange "wpctl set-volume @DEFAULT_SINK@ {}%" 
+        )
+      )
+    )
+  )
+)

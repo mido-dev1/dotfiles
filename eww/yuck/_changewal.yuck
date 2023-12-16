@@ -1,0 +1,7 @@
+(defwidget _changewal []
+  (box
+    (button :onclick "script"
+      (label :text "")
+    )
+  )
+)

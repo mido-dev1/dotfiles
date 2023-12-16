@@ -1,0 +1,95 @@
+;; Include
+(include "/home/mehdi/.cache/wal/colors-eww.yuck")
+(include "yuck/_logo.yuck")
+(include "yuck/_apps.yuck")
+(include "yuck/_workspaces.yuck")
+(include "yuck/_memory.yuck")
+(include "yuck/_battery.yuck")
+(include "yuck/_date.yuck")
+; (include "yuck/_powermenu.yuck")
+(include "yuck/_wifi.yuck")
+(include "yuck/_volume.yuck")
+(include "yuck/_brightness.yuck")
+; (include "yuck/_activewindow.yuck")
+; (include "yuck/_changewal.yuck")
+
+;; Variables
+(defvar eww "/usr/bin/eww")
+
+(defwidget _separator []
+  (label :text "|" :class "separator")
+)
+;; layout
+(defwidget right []
+  (box
+    :orientation "h"
+    :halign "start"
+    :space-evenly false
+    :class "right"
+    (_logo)
+    (_separator)
+    ; (_apps :icon "" :name "Dolphin" :cmd "dolphin" :color "${color10}" :work "${current_workspace}")
+    ; (_apps :icon "󰨞" :name "VSCode" :cmd "code" :color "${color13}" :work "3")
+    ; (_apps :icon "" :name "Terminal" :cmd "kitty" :color "${color11}" :work "${current_workspace}")
+    ; (_apps :icon "" :name "Chromium" :cmd "chromium" :color "${color12}" :work "2")
+  )
+)
+; 64CCC5
+(defwidget center []
+  (box
+    :orientation "h"
+    :halign "center"
+    :space-evenly false
+    :class "center"
+    (_workspaces)
+  )
+)
+(defwidget left []
+  (box
+    :orientation "h"
+    :halign "end"
+    :space-evenly false
+    :class "left"
+    (_brightness)
+    (_volume)
+    (_wifi)
+    (_separator)
+    (_memory)
+    (_battery :status {EWW_BATTERY.BAT0.status}
+      :battery {EWW_BATTERY.BAT0.capacity}
+      :charge "󰂄"
+      :quarter " "
+      :half " "
+      :three-quarters " "
+      :full " "
+    )
+    (_separator)
+    (clock_module)
+  )
+)
+
+(defwidget bar []
+  (box
+    :space-evenly true
+    :orientation "h"
+    (right)
+    (center)
+    (left)
+  )
+)
+
+;; Bar
+(defwindow bar
+  :monitor 0
+  :geometry (geometry
+    :x "0"
+    :y "5px"
+    :width "99%"
+    :height "30px"
+    :anchor "top center"
+  )
+  :stacking "fg"
+  :exclusive "true"
+  :class bar
+  (bar)
+)

@@ -1,0 +1,27 @@
+(defpoll br_value :interval "1s" "brightnessctl | awk -F'[()%]' '/Current brightness/ {print $2}'")
+(defvar br_reveal false)
+
+(defwidget _brightness []
+  (eventbox :onhover "${eww} update br_reveal=true"
+    :onhoverlost "${eww} update br_reveal=false"
+    (box :class "brightness" :space-evenly "false"
+      (button 
+        :class "br_icon"
+          :tooltip "${br_value}%"
+          ; :onclick "scripts/pop audio"
+        "󰃠"
+      )
+      (revealer :transition "slideleft"
+        :reveal br_reveal
+        :duration "350ms"
+        (scale :class "brbar"
+          :value br_value
+          :tooltip "${br_value}%"
+          :max 100
+          :min 0
+        :onchange "brightnessctl set {}%" 
+        )
+      )
+    )
+  )
+)

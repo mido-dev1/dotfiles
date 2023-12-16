@@ -1,0 +1,7 @@
+(defwidget _logo []
+  (eventbox :onclick "/home/mehdi/.config/scripts/wallpaper.sh random"
+    (box
+      (label :text "󰣇" :class "logo")
+    )
+  )
+)

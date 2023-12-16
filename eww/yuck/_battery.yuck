@@ -1,0 +1,21 @@
+(defwidget _battery [battery status charge quarter half three-quarters full]
+  (box :class "battery"
+    (button
+      :class {
+      status == 'Charging' || battery > 80 ? "green" :
+      battery <= 15 ? "red" :
+      battery <= 50 ? "yellow" :
+      50 < battery && battery <= 80 ? "blue" : ""
+      }
+      :tooltip "${battery}%"
+      {
+      status == 'Charging' ? charge :
+      battery <= 25 ? quarter :
+      battery <= 50 ? half :
+      battery <= 75 ? three-quarters :
+      battery <= 100 ? full : 
+      ""
+      }
+    )
+  )
+)

@@ -1,0 +1,27 @@
+(defpoll memory_per :interval "15s" "/home/mehdi/.config/eww/scripts/memory used_per")
+(defpoll memory_used_mb :interval "2m" "/home/mehdi/.config/eww/scripts/memory used")
+(defpoll memory_total_mb :interval "2m" "/home/mehdi/.config/eww/scripts/memory total")
+(defpoll memory_free_mb :interval "2m" "/home/mehdi/.config/eww/scripts/memory free")
+
+(defwidget _memory []
+  (box :class "_memory"
+    
+      (button
+        :class "mem_icon ${
+          memory_per <= 25 ? 'green' :
+          memory_per <= 50 ? 'blue' :
+          memory_per <= 75 ? 'yellow' :
+          memory_per <= 100 ? 'red' :
+          ''
+        }"
+        :tooltip "using ${memory_per}% ram"
+        ; :onclick "$HOME/.config/eww/bar/scripts/pop system"
+      "󰍛")
+    
+  )
+)
+
+
+
+
+; 

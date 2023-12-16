@@ -1,0 +1,220 @@
+@import "scss/colors.scss";
+* {
+  all: unset;
+  margin: 0;
+  padding: 0;
+  // border: 1px solid red;
+}
+
+.bar {
+  background-color: $color0;
+  border-radius: 10px;
+}
+
+// .right,
+// .center,
+// .left {
+//   border-radius: 10px;
+//   // background-color: $color0;
+// }
+
+// tooltip
+tooltip {
+  &.background {
+    background-color: #0f0f17;
+    border-radius: 8px;
+    color: #bfc9db;
+    label {
+      margin: 0 4;
+    }
+  }
+}
+
+// logo
+.logo {
+  font-size: 24px;
+  color: #3366cc;
+  padding: 0 8;
+}
+
+// separator
+.separator {
+  font-size: 14;
+  color: gray;
+  font-weight: lighter;
+}
+
+// workspaces
+.workspaces {
+  color: $color15;
+  .workspace-entry {
+    &.empty label {
+      color: $color9;
+    }
+    &.current label {
+      color: $color7;
+    }
+    padding: 0 8;
+  }
+}
+
+// Brightness
+.brightness {
+  font-size: 18px;
+  .br_icon {
+    color: #fffc5f;
+    padding: 0 8;
+  }
+  .brbar {
+    trough {
+      highlight {
+        background-image: linear-gradient(
+          to right,
+          #e4c9af 30%,
+          #f2cdcd 50%,
+          #e0b089 100% * 50
+        );
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// Volume
+.volume {
+  font-size: 20px;
+  .volume_icon {
+    color: #a1bdce;
+    padding: 0 8;
+  }
+  .volbar {
+    trough {
+      highlight {
+        background-image: linear-gradient(
+          to right,
+          #afcee0 30%,
+          #a1bdce 50%,
+          #77a5bf 100% * 50
+        );
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+// Wifi
+._wifi {
+  font-size: 20px;
+  .wifi-icon {
+    padding: 0 8;
+    &.up {
+      color: #4fe09e;
+    }
+    &.down {
+      color: #ff3144;
+    }
+  }
+}
+
+// memory
+._memory {
+  font-size: 20px;
+  .mem_icon {
+    // color: $color3;
+    padding: 0 8;
+  }
+}
+
+// battery
+.battery {
+  font-size: 16px;
+  label {
+    padding: 0 8;
+  }
+}
+
+// Time
+.time {
+  font-size: 18;
+  label {
+    padding: 0 4;
+    margin: 0 4;
+  }
+  .clock_date_class {
+    font-size: 14;
+  }
+}
+
+// Calendar
+.calendar {
+  background-color: $color0;
+  font-size: 16;
+  font-weight: normal;
+  border-radius: 16;
+
+  calendar {
+    background-color: $color0;
+    border-radius: 16;
+    padding: 5px;
+    color: $color6;
+    border: none;
+    &:selected {
+      background-color: $color2;
+      color: #eee;
+    }
+
+    &.header {
+      color: $color3;
+      border-radius: 0;
+      border-bottom: 1px solid $color3;
+    }
+
+    &.button {
+      color: $color3;
+    }
+
+    &.highlight {
+      color: $color2;
+      font-weight: bold;
+    }
+
+    &:indeterminate {
+      color: #777;
+    }
+  }
+}
+
+// Apps
+.app {
+  font-size: 20;
+  button {
+    padding: 0 8;
+    // color: #8ddfcb;
+  }
+}
+
+// Costum
+.green {
+  color: #4fe09e; // #50b150
+}
+.red {
+  color: #ff3144; // rgb(255, 57, 57)
+}
+.blue {
+  color: #084298; // #6ea8fe
+}
+.yellow {
+  color: #ffda60;
+}
+button:hover {
+  opacity: 0.8;
+}
+scale trough {
+  all: unset;
+  background-color: #22242b;
+  box-shadow: 0 2px 3px 2px #06060b;
+  border-radius: 16px;
+  min-height: 8px;
+  min-width: 60px;
+  margin: 0 8px 0 0;
+}

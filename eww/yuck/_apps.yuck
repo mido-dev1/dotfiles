@@ -1,0 +1,10 @@
+(defwidget _apps [icon name cmd color work]
+  (box
+    :class "app"
+    (button
+      :onclick "hyprctl dispatch exec [workspace ${work} silent] ${cmd}"
+      :tooltip name
+      (label :style "color:${color}":text icon)
+    )
+  )
+)
