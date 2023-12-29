@@ -57,5 +57,6 @@ zinit light sharkdp/bat
 alias ls='eza --icons -F'
 # export dir="/home/mehdi/.config/wallpapers/"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/python/3.12.0/bin:$PATH"
 alias python="/opt/python/3.12.0/bin/python3.12"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/python/3.12.0/lib
