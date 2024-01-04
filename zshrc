@@ -60,3 +60,4 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/python/3.12.0/bin:$PATH"
 alias python="/opt/python/3.12.0/bin/python3.12"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/python/3.12.0/lib
+alias dotfiles='nvim $HOME/gitRepos/dotfiles/'
