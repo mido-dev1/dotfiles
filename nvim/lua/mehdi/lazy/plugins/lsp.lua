@@ -141,6 +141,8 @@ return {
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
-		neodev.setup({})
+		neodev.setup({
+            library = { plugins = { "nvim-dap-ui", "nvim-treesitter", "plenary.nvim", "telescope.nvim", "nvim-dap" }, types = true },
+        })
 	end,
 }

@@ -1,4 +1,4 @@
-pfetch
+pfetch | lolcat
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
 
@@ -61,3 +61,5 @@ export PATH="/opt/python/3.12.0/bin:$PATH"
 alias python="/opt/python/3.12.0/bin/python3.12"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/python/3.12.0/lib
 alias dotfiles='nvim $HOME/gitRepos/dotfiles/'
+#neofetch
+#screenfetch
